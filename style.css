@@ -1,0 +1,316 @@
+@charset "utf-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'PT Serif', serif;
+}
+header {
+	position: relative;
+}
+nav ul {
+	width: 100%;
+	z-index: 99999999;
+	list-style: none;
+	display: none;
+}
+ul li {
+
+}
+nav a {
+	width: 100%;
+	line-height: 80px;
+	margin-bottom: 5px;
+	color: white;
+	background:rgba(17, 179, 179, .6);
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
+nav a:hover {
+	color: green;
+	/*background: rgba(90,90,90,0.8);*/
+}
+nav p span {
+	display: inline-block;/*空間を認識する*/
+	text-indent: -999999px;
+}
+nav p:after {
+	content: "\f410";
+	display: inline-block;
+	color: white;
+	background: transparent;
+	font-size: 30px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+nav.off p:after {
+	content: "\f0c9";
+	display: inline-block;
+	color: white;
+	background: transparent;
+	font-size: 30px;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: absolute;
+	top: 30px;
+	right: 20px;
+}
+.is-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	width: 100%;
+}
+#profile {
+	background-image: url("imgs/TS0529009_TP_V.jpg");/*背景画像*/
+	background-attachment: fixed;/*画面からの相対位置（背景固定）*/
+	background-size: cover;/*背景サイズ調整*/
+	height: 600px;/*div高さ*/
+	position:relative;/*相対位置に配置するように調整*/
+}
+#profile img {
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	position: absolute;
+	top: 15%;/*親要素中の縦位置*/
+ 	left: 20%;/*親要素中の横位置*/
+}
+h1 {
+	position:absolute;/*親要素からの相対位置*/
+	color: rgba(255,255,255,0.8);/*文字色*/
+	top: 10%;/*親要素中の縦位置*/
+	left: 50%;/*親要素中の横位置*/
+	font-size:;/*文字サイズ*/
+	transform: translate(-50%,-50%);/*文字ずれ調整*/
+	margin:0;/*要素外余白*/
+	padding:0;/*要素内余白*/
+}
+h2 {
+	color: orange;
+}
+#intro p {
+	width: 80%;
+	height: 100px;
+	margin: 30px;
+	font-family: 'Sawarabi Mincho', sans-serif;
+	position:absolute;/*親要素からの相対位置*/
+	color: rgba(255,255,255,0.6);/*文字色*/
+	top: 55%;/*親要素中の縦位置*/
+	left: 40%;/*親要素中の横位置*/
+	transform: translate(-50%,-50%);/*文字ずれ調整*/
+}
+#language {
+	position:absolute;/*親要素からの相対位置*/
+	top: 80%;/*親要素中の縦位置*/
+	left: 45%;/*親要素中の横位置*/
+	margin:0;/*要素外余白*/
+	padding:0;/*要素内余白*/
+}
+#language p {
+	color: rgba(255,255,255,0.8);/*文字色*/
+	font-size: 1.2em;
+	position:absolute;/*親要素からの相対位置*/
+	top: 80%;/*親要素中の縦位置*/
+	left: -300%;/*親要素中の横位置*/
+	margin:20px;/*要素外余白*/
+	padding:0;/*要素内余白*/
+}
+
+#product {
+	background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+	background-attachment: fixed;/*画面からの相対位置（背景固定）*/
+	background-size: cover;/*背景サイズ調整*/
+	height: 600px;/*div高さ*/
+	position:relative;/*相対位置に配置するように調整*/
+}
+#product p {
+	position:absolute;/*親要素からの相対位置*/
+	color: rgba(0,2,0,0.6);/*文字色*/
+	top: 10%;/*親要素中の縦位置*/
+	left: 50%;/*親要素中の横位置*/
+	font-size:4em;/*文字サイズ*/
+	transform: translate(-50%,-50%);/*文字ずれ調整*/
+	margin:0;/*要素外余白*/
+	padding:0;/*要素内余白*/
+}
+#remote {
+	position:absolute;/*親要素からの相対位置*/
+	top: 15%;/*親要素中の縦位置*/
+	left: 45%;/*親要素中の横位置*/
+	margin:0;/*要素外余白*/
+	padding:0;/*要素内余白*/
+	display: flex;　/*Flexboxを有効にするための設定*/
+	flex-direction: row; /*コンテナの主軸方向を決める*/
+	justify-content: space-around;　/*コンテナの主軸に沿ってFlexアイテムを一行でどのように配置するか決める*/
+	align-items: center;　/*Flexコンテナのクロス軸に沿ってFlexアイテムをどのように配置するか決める*/
+	flex-wrap: nowrap;　/*Flexアイテムを1行に収めるか複数行にするか決める*/
+}
+#remote div {
+	flex: 0 0 100px;
+	padding: 30px 0;
+}
+.fa-github::before {
+	color: #333;
+	margin: .2em;
+	display: inline-block;
+}
+.fa-bitbucket::before {
+	color: #333;
+	margin: .2em;
+	display: inline-block;
+}
+/* swiper container css */
+.swiper-container {
+        width: 100%;
+        height: 300px;
+        margin: 50px auto;
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
+    .swiper-slide {
+        color:#000;
+        text-align: center;
+        line-height: 300px;
+        background-size: cover;
+		position:relative;
+		float:left;
+		width:320px;
+		margin:0 20px 50px 0;
+		color:#FFF;
+		line-height:2em;
+    }
+}
+/*--introduction--*/
+.swiper-wrapper{
+	display:block;
+	width:800px;
+	margin:0 auto;
+	padding:60px 20px;
+}
+
+.swiper-slide div{
+	position:absolute;
+	display:none;
+	width:100%;
+	height:100%;
+	padding:20px;
+	background:rgba(17, 179, 179, .6);
+	top:0;
+	left:0;
+	box-sizing:border-box;
+}
+#product .swiper-slide p {
+	font-size: 2em;
+	color: rgba(255,255,255,0.8);
+}
+.swiper-slide a {
+	position:absolute;
+	top:40%;
+	left: 40%;
+}
+
+#contact {
+	background-image: url("imgs/shirakoma-2_TP_V.jpg");/*背景画像*/
+	background-attachment: fixed;/*画面からの相対位置（背景固定）*/
+	background-size: cover;/*背景サイズ調整*/
+	height: 600px;/*div高さ*/
+	position:relative;/*相対位置に配置するように調整*/
+}
+
+#contact p {
+	position: absolute;/*親要素からの相対位置*/
+	color: rgba(255,255,255,0.6);/*文字色*/
+	top: 45%;/*親要素中の縦位置*/
+	left: 55%;/*親要素中の横位置*/
+	font-size: 4em;/*文字サイズ*/
+	transform: translate(-50%,-50%);/*文字ずれ調整*/
+	margin: 0;/*要素外余白*/
+	padding: 0;/*要素内余白*/
+}
+#icon {
+	position:absolute;/*親要素からの相対位置*/
+	top: 55%;/*親要素中の縦位置*/
+	left: 35%;/*親要素中の横位置*/
+	margin: 0;/*要素外余白*/
+	padding: 0;/*要素内余白*/
+	display: flex;　/*Flexboxを有効にするための設定*/
+	flex-direction: row; /*コンテナの主軸方向を決める*/
+	justify-content: space-around;　/*コンテナの主軸に沿ってFlexアイテムを一行でどのように配置するか決める*/
+	align-items: center;　/*Flexコンテナのクロス軸に沿ってFlexアイテムをどのように配置するか決める*/
+	flex-wrap: nowrap;　/*Flexアイテムを1行に収めるか複数行にするか決める*/
+}
+#icon div {
+	flex: 0 0 100px;
+	margin-top: 100px;
+	padding: 10px 0;
+}
+.fa-twitter-square::before {
+	color: #00aced;
+	margin: .2em;
+	display: inline-block;
+}
+.fa-facebook-square::before {
+	color: #305097;
+	margin: .2em;
+	display: inline-block;
+}
+.fa-envelope-square::before {
+	color: #fff;
+	margin: .2em;
+	display: inline-block;
+}
+
+
+/* media*/
+@media screen and (min-width: 681px) {
+	nav p.fas{
+		display: none;
+	}
+	nav ul {
+		width: 450px;
+		display: block;
+		background: transparent;
+		position: absolute;
+		top: 10px;
+		right: 50px;
+	}
+	nav li {
+		width: 150px;
+		color: white;
+		float: left;
+	}
+	nav a {
+		background: transparent;
+	}
+}
+@media screen and (min-width: 961px) {
+	#intro p {
+	width: 80%;
+	height: 100px;
+	margin: 30px;
+	position:absolute;/*親要素からの相対位置*/
+	color: rgba(255,255,255,0.6);/*文字色*/
+	top: 45%;/*親要素中の縦位置*/
+	left: 80%;/*親要素中の横位置*/
+	transform: translate(-50%,-50%);/*文字ずれ調整*/
+	}
+	#icon {
+		position:absolute;/*親要素からの相対位置*/
+		top: 45%;/*親要素中の縦位置*/
+		left: 45%;/*親要素中の横位置*/
+	}
+	#contact p {
+		position: absolute;/*親要素からの相対位置*/
+		top: 45%;/*親要素中の縦位置*/
+		left: 50%;/*親要素中の横位置*/
+
+}

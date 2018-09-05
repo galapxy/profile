@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<title>Portfolio</title>
+	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="swiper.css">
+	<link href="animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="demo.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif|Sawarabi+Mincho" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<!-- jquery -->
+	<script src="jQBoss/jquery-3.3.1.js"></script>
+	<script src="script.js"></script>
+    <script src="swiper.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+	<header class="is-fixed">
+		<nav>
+			<p class="fas"><span>MENUBTN</span></p>
+			<ul>
+				<li><a href="#profile">Top</a></li>
+				<li><a href="#product">product</a></li>
+				<li><a href="#contact">contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="profile">
+		<img src="imgs/IMG_1513.jpg" alt="">
+		<h1>Profile</h1>
+		<div id="intro">
+			<p class="animated fadeIn">こんにちは！　本田　亮太と申します。<br>
+				前職は営業職でしたが、Web制作の楽しさを知ってWeb業界に転身します！<br>
+				今後は機械学習を使った、Webマーケティングアプリなどを自主制作します！<br></p>
+		</div>
+		<div id="language">
+			<h2>Skill</h2>
+			<p>HTML/CSS/JS/Ruby/Rails/python/Flask</p>
+		</div>
+	</section>
+	<section id="product">
+		<p>Product</p>
+		<div id="remote">
+			<div id="github">
+				<a class="fab fa-github fa-3x" href="https://github.com/galapxy" target="_blank"></a>
+			</div>
+			<div id="gitbucket">
+				<a class="fab fa-bitbucket fa-3x" href="https://bitbucket.org/dashboard/overview" target="_blank"></a>
+			</div>
+		</div>
+	    <div class="swiper-container">
+	        <div class="swiper-scrollbar"></div>
+	        <div class="swiper-button-prev"></div>
+	        <div class="swiper-button-next"></div>
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide" style="background-image:url(imgs/sample.png)" alt="SNS APP">
+	            	<a href="#" target="_blank"></a>
+	            	<p>EVHAP</p>
+	            </div>
+	            <div class="swiper-slide" style="background-image:url(imgs/imgf03.jpg)" alt="under development
+">
+	            	<p>Auto Traiding</p>
+	            </div>
+	            <div class="swiper-slide" style="background-image:url(imgs/imgf04.jpg)" alt="under development
+">
+	            	<p>Tweet Point</p>
+	            </div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+	<section id="contact">
+		<p>Let's get in touch</p>
+		<div id="icon">
+			<div id="twitter">
+				<a class="fab fa-twitter-square fa-3x" href="https://twitter.com/Ryota0961646961" target="_blank"></a>
+			</div>
+			<div id="facebook">
+				<a class="fab fa-facebook-square fa-3x" href="https://www.facebook.com/profile.php?id=100026469773103" target="_blank"></a>
+			</div>
+			<div id="slack">
+				<a class="fas fa-envelope-square fa-3x" href="mailto:galapxy@outlook.jp"></a>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+$(function(){
+    $('a[href^=#]').click(function(){
+        var speed = 500;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, "swing");
+        return false;
+    });
+});
+
+</script>
+
+    <script>
+        var swiper = new Swiper({
+            el: '.swiper-container',
+            initialSlide: 1,
+            spaceBetween: 50,
+            slidesPerView: 2,
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+            mousewheel: {
+              enabled: true,
+            },
+            keyboard: {
+              enabled: true,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>
