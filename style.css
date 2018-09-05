@@ -5,6 +5,9 @@
 	padding: 0px;
 	font-family: 'PT Serif', serif;
 }
+body {
+	overflow-x: hidden;
+}
 header {
 	position: relative;
 }
@@ -72,7 +75,7 @@ nav.off p:after {
 	background-image: url("imgs/TS0529009_TP_V.jpg");/*背景画像*/
 	background-attachment: fixed;/*画面からの相対位置（背景固定）*/
 	background-size: cover;/*背景サイズ調整*/
-	height: 600px;/*div高さ*/
+	height: 620px;/*div高さ*/
 	position:relative;/*相対位置に配置するように調整*/
 }
 #profile img {
@@ -222,7 +225,7 @@ h2 {
 	background-image: url("imgs/shirakoma-2_TP_V.jpg");/*背景画像*/
 	background-attachment: fixed;/*画面からの相対位置（背景固定）*/
 	background-size: cover;/*背景サイズ調整*/
-	height: 600px;/*div高さ*/
+	height: 620px;/*div高さ*/
 	position:relative;/*相対位置に配置するように調整*/
 }
 
@@ -238,7 +241,7 @@ h2 {
 }
 #icon {
 	position:absolute;/*親要素からの相対位置*/
-	top: 55%;/*親要素中の縦位置*/
+	top: 50%;/*親要素中の縦位置*/
 	left: 35%;/*親要素中の横位置*/
 	margin: 0;/*要素外余白*/
 	padding: 0;/*要素内余白*/
